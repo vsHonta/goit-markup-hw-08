@@ -1,0 +1,16 @@
+:root {
+    /* fonts */
+    --main-font: Roboto, sans-serif;
+    --secondary-font: Raleway, sans-serif;
+    /* main colors */
+    --main-txt-cl: #212121;
+    --secondary-txt-cl: #757575;
+    --special-txt-cl: #2196F3;
+    /* bg colors */
+    --light-bg-clr: #E5E5E5;
+    --grey-bg-color: #F5F4FA;
+    --black-bg-color: #2F303A;
+    /* timing of animation */
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --anim-fast: 250ms;
+}

@@ -1,0 +1,38 @@
+.cstmrs {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.cstmrs__title {
+    margin: 0 auto 50px;
+}
+
+.cstmrs__list {
+    display: flex;
+    gap: 30px
+}
+
+.cstmrs__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+
+    color: #AFB1B8;
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+    transition: color var(--anim-fast) var(--timing-function),
+        border-color var(--anim-fast) var(--timing-function);
+
+        &:hover, &:focus{
+            color: #188CE8;
+            border-color: #188CE8;
+        }
+}
+
+.cstmrs__icon {
+    --icon-logo-color: currentColor;
+}

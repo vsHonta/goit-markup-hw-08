@@ -1,0 +1,114 @@
+.order-form {
+    text-align: center;
+}
+
+.order-form__title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    letter-spacing: 0.03em;
+    color: #212121;
+    text-align: center;
+}
+
+.order-form__group {
+    margin-bottom: 20px;
+}
+
+.order-form__wrap {
+    display: block;
+    position: relative;
+
+    transition: color var(--anim-fast) var(--timing-function);
+
+    &:last-child{
+        margin-bottom: 20px;
+    }
+
+    &:not(:last-child){
+        margin-bottom: 28px;
+    }
+
+    &:hover{
+        color: var(--special-txt-cl);
+    }
+}
+
+.order-form__input {
+    width: 100%;
+    min-height: 40px;
+    padding-left: 42px;
+    padding-right: 15px;
+
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    background: #FFFFFF;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: transparent;
+
+    transition: border-color var(--anim-fast) var(--timing-function);
+
+    &:hover, &:focus-within{
+        border-color: var(--special-txt-cl);
+    }
+}
+
+.order-form__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-18px);
+
+    font-size: 12px;
+    line-height: calc(14 / 12);
+
+    color: #757575;
+}
+
+
+.order-form__icon {
+    fill: currentColor;
+
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    bottom: 11px;
+
+    pointer-events: none;
+
+    .order-form__wrap:focus-within &{
+        fill: var(--special-txt-cl);
+    }
+}
+
+.order-form__txtarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: transparent;
+
+    transition: border-color var(--anim-fast) var(--timing-function);
+
+    &:hover, &:focus{
+        border-color: var(--special-txt-cl);
+    }
+}
+
+.order-form__agreement {
+    margin-bottom: 30px;
+}

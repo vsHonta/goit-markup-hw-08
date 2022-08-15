@@ -1,0 +1,35 @@
+.addrs__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.addr__loc {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+
+    transition: color var(--anim-fast) var(--timing-function);
+
+    &:hover{
+        color: var(--special-txt-cl);
+    }
+}
+
+.addr__link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: color var(--anim-fast) var(--timing-function);
+
+    &:hover{
+        color: var(--special-txt-cl);
+    }
+}
+
+.addr-list {
+    min-width: 231px;
+}

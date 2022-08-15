@@ -1,0 +1,68 @@
+.sbscr__title {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: calc(16 /14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.sbscr__container {
+    display: flex;
+    gap: 12px;
+}
+
+.sbscr__input-wrap {
+    position: relative;
+}
+
+.sbscr__input {
+    width: 358px;
+    min-height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #FFFFFF;
+
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder{
+        color: transparent;
+        transition: var(--anim-fast) var(--timing-function);
+    }
+
+    &:hover::placeholder, &:focus::placeholder{
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.sbscr__label {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: opacity var(--anim-fast) var(--timing-function);
+
+    .sbscr__input:hover+&,
+    .sbscr__input:focus+&,
+    .sbscr__input:not(:placeholder-shown)+&{
+            opacity: 0;
+    }
+}
+
+.sbscr__btn {
+    gap: 10px;
+}
+
+
+

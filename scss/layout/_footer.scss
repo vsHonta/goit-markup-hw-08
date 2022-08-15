@@ -1,0 +1,33 @@
+.ftr {
+    background-color: var(--black-bg-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.ftr__container {
+    display: flex;
+    align-items: baseline;
+}
+
+.ftr__addrs-box {
+    margin-right: 70px;
+}
+
+.ftr__logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.ftr__socials-box {
+    margin-right: 93px;
+}
+
+.ftr__appeal {
+    color: #FFFFFF;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+
+    margin-bottom: 20px;
+}
