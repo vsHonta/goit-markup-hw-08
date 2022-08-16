@@ -3,26 +3,87 @@
 }
 
 .hdr__container {
-    display: flex;
+    max-height: 60px;
+
+    @media screen and (max-width: 767px) {
+        display: flex;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        max-height: 80px;
+    }
 }
 
 .hdr__nav {
-    margin-right: auto;
-    display: flex;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin-right: 96px;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-right: 312px;
+    }
+}
+
+.hdr__menu{
+    display: none;
+
+    @media screen and (min-width: 768px) {
+            display: flex;
+        }
 }
 
 .hdr__logo {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-.hdr__list {
-    display: flex;
-    align-items: center;
+    padding: 16px 0;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 88px;
+        padding: 26px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
 }
 
+.hdr__mobile-btn{
+    padding: 10px 0;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: color var(--anim-fast) var(--timing-function);
+
+    &:hover, &:focus{
+        color: var(--special-txt-cl);
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.hdr__icon{
+    --icon-logo-color: currentColor;
+}
+
+.hdr__list {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        }
+    }
+
+
 .hdr__item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: 768px) {
+            margin-right: 50px;
+        }
+    
 }
 
 .hdr__link {
@@ -47,15 +108,18 @@
     color: var(--special-txt-cl);
     position: relative;
 
-    &::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-
-    background-color: var(--special-txt-cl);
-
-    position: absolute;
-    bottom: 0;
+    @media screen and (min-width: 768px) {
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+    
+            background-color: var(--special-txt-cl);
+    
+            position: absolute;
+            bottom: 0;
+        }
     }
+
 }
