@@ -1,35 +1,78 @@
 .order {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-image-studio.jpg);
-    /* background-image: url(../images/bg-image-studio.jpg); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #C4C4C4;
-
-    max-width: 1600px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #C4C4C4;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgr/bgr-img@1x_sm.jpg);
+    
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx){
+        background-image: url(/images/bgr/bgr-img@2x_sm.jpg);
+    }
+
+    // Tablet
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgr/bgr-img@1x_md.jpg);
+        padding-top: 118px;
+        padding-bottom: 118px;
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(/images/bgr/bgr-img@2x_md.jpg);
+            }
+        }
+
+
+    // Desktop
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgr/bgr-img@1x_lg.jpg);
+        max-width: 1600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(/images/bgr/bgr-img@2x_lg.jpg);
+            }
+    }
+
+
 }
 
 .order__headline {
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: calc(42 / 26);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    @media screen and (min-width: 1200px){
+        font-size: 44px;
+        line-height: calc(60 / 44);
+    }
 }
 
 .order__button {
+    max-width: 200px;
     margin: 0 auto;
     display: flex;
-    width: 216px;
 
     &:hover, &:focus{
         background-color: #188CE8;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 216px;
     }
 }

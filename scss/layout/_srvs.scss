@@ -1,13 +1,12 @@
 .srvs {
     padding-bottom: 94px;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
 
-.sub-title {
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-}
+
 
 .srvs__sub-title {
     margin-bottom: 50px;
