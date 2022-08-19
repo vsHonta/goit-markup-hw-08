@@ -181,6 +181,13 @@ button {
   display: flex;
   gap: 10px;
 }
+@media screen and (max-width: 1199px) {
+  .socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .socials__link {
   display: -webkit-box;
@@ -559,30 +566,72 @@ button {
 
 .ftr {
   background-color: var(--black-bg-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ftr__container {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ftr__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
-.ftr__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (min-width: 768px) {
+  .tablet-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .ftr__addrs-box {
-  margin-right: 70px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .ftr__addrs-box {
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ftr__addrs-box {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .ftr__logo {
   display: block;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 1199px) {
+  .ftr__logo {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.1666666667;
+  }
+}
 
-.ftr__socials-box {
-  margin-right: 93px;
+@media screen and (max-width: 1199px) {
+  .ftr__socials-box {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ftr__socials-box {
+    margin-right: 93px;
+  }
 }
 
 .ftr__appeal {
@@ -592,9 +641,10 @@ button {
   line-height: 1.1428571429;
   margin-bottom: 20px;
 }
-
-.addrs__item:not(:last-child) {
-  margin-bottom: 9px;
+@media screen and (max-width: 1199px) {
+  .ftr__appeal {
+    text-align: center;
+  }
 }
 
 .addr__loc {
@@ -627,6 +677,21 @@ button {
   min-width: 231px;
 }
 
+@media screen and (max-width: 1199px) {
+  .addrs__item {
+    text-align: center;
+  }
+}
+
+.addrs__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .addrs__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
 .sbscr__title {
   display: block;
   margin-bottom: 20px;
@@ -636,20 +701,38 @@ button {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+@media screen and (max-width: 1199px) {
+  .sbscr__title {
+    text-align: center;
+  }
+}
 
-.sbscr__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 12px;
+@media screen and (min-width: 1200px) {
+  .sbscr__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 12px;
+  }
 }
 
 .sbscr__input-wrap {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 1199px) {
+  .sbscr__input-wrap {
+    margin-bottom: 20px;
+  }
 }
 
 .sbscr__input {
-  width: 358px;
+  width: 100%;
   min-height: 50px;
   padding-left: 16px;
   padding-right: 16px;
@@ -659,6 +742,17 @@ button {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .sbscr__input {
+    width: 450px;
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sbscr__input {
+    width: 358px;
+  }
 }
 .sbscr__input::-webkit-input-placeholder {
   color: transparent;
@@ -712,6 +806,11 @@ button {
   -webkit-transition: opacity var(--anim-fast) var(--timing-function);
   transition: opacity var(--anim-fast) var(--timing-function);
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .sbscr__label {
+    left: 92px;
+  }
+}
 .sbscr__input:not(:-moz-placeholder-shown) + .sbscr__label {
   opacity: 0;
 }
@@ -724,6 +823,14 @@ button {
 
 .sbscr__btn {
   gap: 10px;
+}
+@media screen and (max-width: 1199px) {
+  .sbscr__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+  }
 }
 
 .order {
