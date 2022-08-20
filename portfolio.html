@@ -26,47 +26,61 @@
   <body>
     <header class="hdr">
       <div class="container hdr__container">
-        <nav class="hdr__nav">
-          <!--Brand Logo-->
-          <a href="" class="logo hdr__logo"
-            >Web<span class="logo__text logo__text--black link">Studio</span></a
-          >
-          <!--List of navigation links-->
-          <ul class="hdr__list">
-            <li class="hdr__item">
-              <a href="./index.html" class="hdr__link link">Студія</a>
-            </li>
-            <li class="hdr__item">
-              <a
-                href="./portfolio.html"
-                class="hdr__link hdr__link--current link"
-                >Портфоліо</a
+        <!--Mobile menu elements-->
+        <a href="" class="logo hdr__logo"
+          >Web<span class="logo__text logo__text--black">Studio</span></a
+        >
+        <button
+          type="button"
+          class="hdr__mobile-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="hdr__icon" width="40" height="40">
+            <use
+              href="./images/icons_svg/sprite.svg#hdr-mobile-open-icon"
+            ></use>
+          </svg>
+        </button>
+        <!--List of navigation links-->
+        <div class="hdr__menu">
+          <nav class="hdr__nav">
+            <ul class="hdr__list">
+              <li class="hdr__item">
+                <a href="./index.html" class="hdr__link">Студія</a>
+              </li>
+              <li class="hdr__item">
+                <a href="./portfolio.html" class="hdr__link hdr__link--current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="hdr__item">
+                <a href="" class="hdr__link link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <!--Contacts-->
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="contacts__link link">
+                <svg class="contacts__icon contacts__icon--env">
+                  <use href="./images/icons_svg/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="hdr__item">
-              <a href="" class="hdr__link link">Контакти</a>
+            <li class="contacts__item">
+              <a href="tel:+380961111111" class="contacts__link link">
+                <svg class="contacts__icon contacts__icon--mob">
+                  <use
+                    href="./images/icons_svg/sprite.svg#icon-smartphone"
+                  ></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <!--Contacts-->
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link link">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons_svg/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__link link">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons_svg/sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -98,11 +112,41 @@
             <li class="work-exmpl__item">
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
-                  <img
-                    src="./images/portfolio1.jpg"
-                    alt="открытый ноутбук"
-                    width="370"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img-1@1x_lg.jpg 1x,
+                        ./images\portfolio\img-1@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img-1@1x_md.jpg 1x,
+                        ./images\portfolio\img-1@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img-1@1x_sm.jpg 1x,
+                        ./images\portfolio\img-1@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="card-img"
+                      src="./images/portfolio/img-1@1x_sm.jpg"
+                      alt="відкритий ноутбук"
+                      width="450"
+                    />
+                  </picture>
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -119,9 +163,10 @@
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
                   <img
+                    class="card-img"
                     src="./images/portfolio2.jpg"
-                    alt="два баскетболиста в прыжке"
-                    width="370"
+                    alt="два баскетболіста в прижку"
+                    width="450"
                   />
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -141,9 +186,10 @@
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
                   <img
+                    class="card-img"
                     src="./images/portfolio3.jpg"
-                    alt="логотип ресторана"
-                    width="370"
+                    alt="логотип ресторану"
+                    width="450"
                   />
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -161,9 +207,10 @@
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
                   <img
+                    class="card-img"
                     src="./images/portfolio4.jpg"
-                    alt="полноразмерные наушники"
-                    width="370"
+                    alt="повнорозмірні навушники"
+                    width="450"
                   />
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -181,9 +228,10 @@
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
                   <img
+                    class="card-img"
                     src="./images/portfolio5.jpg"
-                    alt="две коробки белого и коричневого цвета"
-                    width="370"
+                    alt="дві коробки білого и коричневого кольору"
+                    width="450"
                   />
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -201,9 +249,10 @@
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
                   <img
+                    class="card-img"
                     src="./images/portfolio6.jpg"
-                    alt="монитор компании Apple"
-                    width="370"
+                    alt="монітор компанії Apple"
+                    width="450"
                   />
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -221,9 +270,10 @@
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
                   <img
+                    class="card-img"
                     src="./images/portfolio7.jpg"
-                    alt="открытая книга"
-                    width="370"
+                    alt="відкрита книга"
+                    width="450"
                   />
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -241,9 +291,10 @@
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
                   <img
+                    class="card-img"
                     src="./images/portfolio81.jpg"
-                    alt="бирка с названием бренда"
-                    width="370"
+                    alt="бірка з назвою бренду"
+                    width="450"
                   />
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -261,9 +312,10 @@
               <a href="" class="work-exmpl__link">
                 <div class="card-overlay">
                   <img
+                    class="card-img"
                     src="./images/portfolio9.jpg"
-                    alt="человек печатает на комп'ютере"
-                    width="370"
+                    alt="людина друкує на комп'ютері"
+                    width="450"
                   />
                   <p class="card-overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -283,76 +335,78 @@
     </main>
     <footer class="ftr">
       <div class="container ftr__container">
-        <!--Brand Logo-->
-        <div class="addrs-box ftr__addrs-box">
-          <a href="" class="logo addrs-box__logo link"
-            >Web<span class="logo__text logo__text--white link">Studio</span></a
-          >
-          <address class="addrs">
-            <ul class="addrs__list list">
-              <li class="addrs__item">
-                <a
-                  class="addr__loc link"
-                  href="https://goo.gl/maps/46HjrAHxcbsHxjKQ8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="tablet-wrap">
+          <!--Brand Logo-->
+          <div class="ftr__addrs-box">
+            <a href="" class="logo ftr__logo"
+              >Web<span class="logo__text logo__text--white">Studio</span></a
+            >
+            <address class="addrs">
+              <ul class="addrs__list">
+                <li class="addrs__item">
+                  <a
+                    class="addr__loc link"
+                    href="https://goo.gl/maps/46HjrAHxcbsHxjKQ8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="addrs__item">
+                  <a href="mailto:info@devstudio.com" class="addr__link link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="addrs__item">
+                  <a href="tel:+380961111111" class="addr__link link"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <!-- Social Network Links -->
+          <div class="ftr__socials-box">
+            <p class="ftr__appeal">ПРИЄДНУЙТЕСЬ</p>
+            <ul class="socials">
+              <li class="socials__item">
+                <a href="" class="socials__link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use
+                      href="./images/icons_svg/sprite.svg#icon-instagram-footer"
+                    ></use>
+                  </svg>
+                </a>
               </li>
-              <li class="addrs__item">
-                <a href="mailto:info@devstudio.com" class="addr__link link"
-                  >info@devstudio.com</a
-                >
+              <li class="socials__item">
+                <a href="" class="socials__link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use
+                      href="./images/icons_svg/sprite.svg#icon-twitter-footer"
+                    ></use>
+                  </svg>
+                </a>
               </li>
-              <li class="addrs__item">
-                <a href="tel:+380961111111" class="addr__link link"
-                  >+38 099 111 11 11</a
-                >
+              <li class="socials__item">
+                <a href="" class="socials__link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use
+                      href="./images/icons_svg/sprite.svg#icon-facebook--footer"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="" class="socials__link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use
+                      href="./images/icons_svg/sprite.svg#icon-linkedin-footer"
+                    ></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <!-- Social Network Links -->
-        <div class="socials-box ftr__socials-box">
-          <p class="ftr__appeal">ПРИЄДНУЙТЕСЬ</p>
-          <ul class="socials">
-            <li class="socials__item">
-              <a href="" class="socials__link">
-                <svg class="socials__icon" width="20" height="20">
-                  <use
-                    href="./images/icons_svg/sprite.svg#icon-instagram-footer"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="" class="socials__link">
-                <svg class="socials__icon" width="20" height="20">
-                  <use
-                    href="./images/icons_svg/sprite.svg#icon-twitter-footer"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="" class="socials__link">
-                <svg class="socials__icon" width="20" height="20">
-                  <use
-                    href="./images/icons_svg/sprite.svg#icon-facebook--footer"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="" class="socials__link">
-                <svg class="socials__icon" width="20" height="20">
-                  <use
-                    href="./images/icons_svg/sprite.svg#icon-linkedin-footer"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <!-- Subscription Form-->
         <form class="sbscr">
@@ -378,5 +432,55 @@
         </form>
       </div>
     </footer>
+    <!-- Mobile Menu -->
+    <div class="menu js-menu-container" id="mobile-menu">
+      <button type="button" class="menu__btn js-close-menu">
+        <svg class="hdr__icon" width="40" height="40">
+          <use href="./images/icons_svg/sprite.svg#hdr-mobile-close-icon"></use>
+        </svg>
+      </button>
+      <ul class="menu__main-list">
+        <li class="menu__main-item"><a href="./index.html">Студія</a></li>
+        <li class="menu__main-item hdr__link--current">
+          <a href="./portfolio.html">Портфоліо</a>
+        </li>
+        <li class="menu__main-item"><a href="">Контакти</a></li>
+      </ul>
+      <ul class="menu__contacts-list">
+        <li class="menu__contacts-item">
+          <a class="menu__contacts-link" href="tel:+380961111111"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li class="menu__contacts-item">
+          <a class="menu__contacts-link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="menu__socials-list">
+        <li class="menu__socials-item">
+          <a href="" class="menu__socilas-link">Instagram</a>
+        </li>
+        <li class="menu__socials-item">
+          <a href="" class="menu__socilas-link">Twitter</a>
+        </li>
+        <li class="menu__socials-item">
+          <a href="" class="menu__socilas-link">Facebook</a>
+        </li>
+        <li class="menu__socials-item">
+          <a href="" class="menu__socilas-link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+    <!-- JS scripts -->
+    <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

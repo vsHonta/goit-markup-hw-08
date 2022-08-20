@@ -28,13 +28,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1) rotate(0);
-    width: 528px;
-    min-height: 581px;
+    width: 450px;
+    min-height: 609px;
     padding: 40px;
 
     background-color: #FFFFFF;
-
     transition: transform var(--anim-fast) var(--timing-function);
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        min-height: 581px;
+    }
 
     &.is-hidden .modal{
         transform: translate(-50%, -50%) scale(0.3) rotate(1turn);
