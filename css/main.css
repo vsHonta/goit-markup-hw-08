@@ -859,7 +859,8 @@ button {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .order {
-    background-image: url(/images/bgr/bgr-img@2x_sm.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bgr/bgr-img@2x_sm.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgr/bgr-img@2x_sm.jpg);
   }
 }
 @media screen and (min-width: 768px) {
@@ -872,7 +873,8 @@ button {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .order {
-    background-image: url(/images/bgr/bgr-img@2x_md.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bgr/bgr-img@2x_md.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgr/bgr-img@2x_md.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -886,7 +888,8 @@ button {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .order {
-    background-image: url(/images/bgr/bgr-img@2x_lg.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bgr/bgr-img@2x_lg.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgr/bgr-img@2x_lg.jpg);
   }
 }
 
@@ -956,12 +959,15 @@ button {
 .advnt__item {
   margin: 0 auto;
   max-width: 450px;
-  margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  .advnt__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .advnt__item {
     width: 354px;
-    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -992,6 +998,11 @@ button {
   line-height: 1.1428571429;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .advnt__title {
+    text-align: start;
+  }
 }
 
 .advnt__about {

@@ -25,11 +25,15 @@
 .advnt__item {
     margin: 0 auto;
     max-width: 450px;
-    margin-bottom: 30px;
 
+    @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    
     @media screen and (min-width: 768px){
         width: 354px;
-        margin-bottom: 0;
     }
 
     @media screen and (min-width: 1200px){
@@ -58,6 +62,10 @@
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+        text-align: start;
+    }
 }
 
 .advnt__about {
